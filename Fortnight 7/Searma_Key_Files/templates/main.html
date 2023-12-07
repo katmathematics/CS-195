@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sesarma</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/main_style.css') }}">
+</head>
+<body>
+    <div class = "sesarma-interface">
+        <img src="{{ user_image }}" alt="Sesarma Icon" width="480" height="480" class="center">
+        <div class = "chat-storage">
+            <div class = "chat-bubble">
+                <div class="type">
+                    {{ sesarma_output }}
+                </div>
+            </div>
+            
+            <form action = "http://localhost:5000" method = "post" class = chat-interface>
+                <p><input type = "text" name = "nm" placeholder="Type something..." class = "input-field" required/></p>
+                <p><input type = "submit" class = "submission" value = "Submit" /></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
